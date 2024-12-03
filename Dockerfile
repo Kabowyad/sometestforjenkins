@@ -1,5 +1,5 @@
 # Use a multi-stage build to keep the final image lightweight
-FROM maven:3.8.6-openjdk-17 AS build
+FROM maven:3.5.0 AS build
 
 # Set the working directory
 WORKDIR /app
