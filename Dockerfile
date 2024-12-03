@@ -15,7 +15,7 @@ RUN mvn clean package -DskipTests
 FROM anapsix/alpine-java
 
 # Copy the jar file from the build stage
-COPY --from=build /app/target/my-app-1.0-SNAPSHOT.jar /home/my-app-1.0-SNAPSHOT.jar
+COPY --from=build /app/target/* /home/my-app.jar
 
 # Command to run the application
-CMD ["java", "-jar", "/home/my-app-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/home/my-app.jar"]
