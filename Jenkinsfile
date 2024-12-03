@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'localhost:5000/your-image-name' // Replace with your desired image name
+        DOCKER_IMAGE_NAME = 'localhost:5000/cowboy' // Replace with your desired image name
     }
 
     stages {
